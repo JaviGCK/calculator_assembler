@@ -1,0 +1,197 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.bodyStyle {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: radial-gradient(
+        circle at 50% -1.45%,
+        #ffffff 0,
+        #ebffff 25%,
+        #b5def2 50%,
+        #7fb9d7 75%,
+        #4e9ac1 100%
+    );
+}
+
+.calculator {
+    display: grid;
+    grid-template-rows: 35% auto;
+    min-width: 400px;
+    height: 700px;
+    max-width: 1000px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0px 2px 25px #f4f9fa;
+    background-color: #e0f7ff;
+}
+
+.screen {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 20% 30% auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 70px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+input[type="checkBox"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#switchBtn span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    opacity: 1;
+
+    border-radius: 40px;
+    transition:
+        0.2s ease background-color,
+        0.2s ease opacity;
+}
+
+#switchBtn span:before,
+#switchBtn span:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition:
+        0.5s ease transform,
+        0.2s ease background-color;
+}
+
+#switchBtn span:before {
+    background-color: #edfded;
+    transform: translate(-28px, 0px);
+    z-index: 1;
+}
+
+#switchBtn span:after {
+    background-color: lightblue;
+    transform: translate(8px, 0px);
+    z-index: 0;
+}
+
+#switchBtn input[type="checkbox"]:active + span {
+    opacity: 0.5;
+}
+
+#switchBtn input[type="checkbox"]:checked + span:before {
+    background-color: #5d6366;
+    transform: translate(23px, -10px);
+}
+
+#switchBtn input[type="checkbox"]:checked + span:after {
+    background-color: antiquewhite;
+    transform: translate(35px, 0px);
+}
+
+.spanStyle {
+    box-shadow: 0px 2px 25px #50aece;
+}
+
+.lastOps {
+    grid-row: 2/3;
+    display: grid;
+    justify-content: right;
+    align-items: flex-end;
+    min-height: 90%;
+    margin: 0 10px 0 10px;
+    font-size: 3rem;
+    color: #4e9ac1;
+    opacity: 0.6;
+}
+
+.display {
+    grid-row: 3/4;
+    display: grid;
+    justify-content: right;
+    align-items: flex-end;
+    min-height: 90%;
+    margin: 0 10px 0 10px;
+    font-size: 6rem;
+    color: #4e9ac1;
+}
+
+.buttonCalculator {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 18px;
+    height: 95%;
+    justify-content: center;
+}
+
+.buttonStyle {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0px 2px 25px #50aece;
+    background-color: #edfded;
+    color: #4e9ac1;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+
+.bodyStyleDark {
+    background-image: linear-gradient(180deg, #5d6366 0, #415460 25%, #1f4459 50%, #003553 75%, #00264d 100%);
+}
+
+.calculatorDark {
+    box-shadow: 0px 2px 25px #f4f9fa;
+    background-color: #5d6366;
+}
+
+.switchBtnDark {
+    box-shadow: 0px 2px 25px #f4f9fa;
+}
+
+.lastOpsDark {
+    color: antiquewhite;
+}
+
+.displayDark {
+    color: antiquewhite;
+}
+
+.buttonStyleDark {
+    box-shadow: 0px 2px 25px #f4f9fa;
+    background-color: #00264d;
+    color: antiquewhite;
+}
