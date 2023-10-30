@@ -10,8 +10,6 @@ This is a simple web calculator created using HTML, CSS, and JavaScript that all
 
 ## Preview
 
-## Preview
-
 ![Calculator Preview](https://github.com/JaviGCK/calculator_assembler/blob/main/img/Calculator%202.png)
 ![Calculator Preview](https://github.com/JaviGCK/calculator_assembler/blob/main/img/calculator2%202.png)
 
